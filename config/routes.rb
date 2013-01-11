@@ -1,8 +1,8 @@
 BabbleZone::Application.routes.draw do
 
-  root :to => "blogs#index"
-  
   resources :blogs
+  
+  root :to => "blogs#index"
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
