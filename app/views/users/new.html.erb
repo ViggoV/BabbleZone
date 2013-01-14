@@ -1,0 +1,17 @@
+<% provide :header_string, "Sign up for BabbleZone" %>
+
+<div id="user_container">
+  <ul>
+    <%= form_for(@user) do |f| %>
+      <li><%= f.label           :mail %></li>
+      <li><%= f.text_field      :mail %></li>
+      <li><%= f.label           :name %></li>
+      <li><%= f.text_field      :name %></li>
+      <li><%= f.label           :password %></li>
+      <li><%= f.password_field  :password %></li>
+      <li><%= f.label           :password_confirmation %></li>
+      <li><%= f.password_field  :password_confirmation %></li>
+      <li><%= f.submit          "Create Account" %></li>
+    <% end %>
+  </ul>
+</div>

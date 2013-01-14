@@ -1,5 +1,6 @@
 BabbleZone::Application.routes.draw do
 
+  resources :users
   resources :blogs
   
   root :to => "blogs#index"
