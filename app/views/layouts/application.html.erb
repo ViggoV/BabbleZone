@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>BabbleZone</title>
+    <title><%= yield :header_string %></title>
     <%= stylesheet_link_tag    "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <div id="main_container">
-      <div id="main_content">
-        <div id="main_header"><%= yield :header_string %></div>
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="brand"><%= yield :header_string %></div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
         <%= yield %>
       </div>
     </div>
