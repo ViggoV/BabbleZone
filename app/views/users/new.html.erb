@@ -1,4 +1,6 @@
-<% provide :header_string, "Sign up for BabbleZone" %>
+<% content_for :header_string, "Sign up for BabbleZone" %>
+<% content_for :signup_link_tag, "active" %>
+
 <div class="span12"><%= render "shared/message_area" %></div>
 <div class="span4 offset4">
   <%= form_for(@user) do |f| %>

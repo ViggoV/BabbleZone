@@ -9,7 +9,22 @@
   <body>
     <div class="navbar">
       <div class="navbar-inner">
-        <div class="brand"><%= yield :header_string %></div>
+        <div class="brand">
+          <strong><%= yield :header_string %></strong>
+        </div>
+        <ul class="nav pull-right">
+          <%= content_tag(:li,
+                          link_to("Home", root_path),
+                          :class => content_for?(:home_link_tag) ? "active" : "") %>
+                          
+          <%= content_tag(:li,
+                          link_to("Help", "#"),
+                          :class => content_for?(:help_link_tag) ? "active" : "") %>
+                          
+          <%= content_tag(:li,
+                          link_to("Signup", "/signup"),
+                          :class => content_for?(:signup_link_tag) ? "active" : "") %>
+        </ul>
       </div>
     </div>
     <div class="container">
