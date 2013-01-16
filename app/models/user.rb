@@ -1,5 +1,8 @@
 class User < ActiveRecord::Base
   attr_accessible :mail, :name, :password, :password_confirmation, :description, :avatar_type, :avatar_path
+  has_secure_password
+  
+  before_save { |user| user.mail = user.mail.downcase }
   
   VALID_REGEX = /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i
   validates :mail, :format => { with: VALID_REGEX, :on => :create },

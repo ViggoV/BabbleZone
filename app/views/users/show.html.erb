@@ -1,3 +1,7 @@
 <% provide :header_string, "#{@user.name} @ BabbleZone" %>
-<h1><%= @user.name %></h1>
+
+<div class="well">
+  <h1><%= @user.name %></h1>
+  <%= user_logged_in?(@user) ? "- Is currently logged in" : "- Is not logged in" %>
+</div>
 <p>Find me in app/views/users/show.html.erb</p>

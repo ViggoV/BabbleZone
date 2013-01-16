@@ -1,9 +1,11 @@
 BabbleZone::Application.routes.draw do
 
   resources :users
+  resources :sessions, :only => [:create, :destroy]
   resources :blogs
   
   root :to => "blogs#index"
+  match '/' => "blogs#index"
   match '/signup' => "users#new"
   
   # The priority is based upon order of creation:
