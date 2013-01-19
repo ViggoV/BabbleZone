@@ -9,16 +9,19 @@ def create
       flash[:success] = "Sign In Succeeded, yay!"
       redirect_to user_path(user)
     else
-      flash[:error] = "Ooops.. Something went wrong! Try again.."
-      redirect_to request.referer
+      flash.now[:error] = "Ooops.. Something went wrong! Try again.."
+      render request.referer
     end
   else
-    flash[:error] = "Sorry, we couldn't log you in.. Try again!"
-    redirect_to request.referer
+    flash.now[:error] = "Sorry, we couldn't log you in.. Try again!"
+    render request.referer
   end
 end
 
 def destroy
+  sign_out
+  flash[:success] = "You are now signed out of BabbleZone.. See you!"
+  redirect_to root_path
 end
 
 end

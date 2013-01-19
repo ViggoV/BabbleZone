@@ -5,8 +5,9 @@ BabbleZone::Application.routes.draw do
   resources :blogs
   
   root :to => "blogs#index"
-  match '/' => "blogs#index"
+#  match '/' => "blogs#index"
   match '/signup' => "users#new"
+  match '/signout' => "sessions#destroy", :via => :delete
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
