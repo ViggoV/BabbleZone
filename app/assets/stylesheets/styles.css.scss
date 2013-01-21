@@ -33,7 +33,8 @@ body {
     @include babble-text;
 }
 //----------
-//Styles signin form
+
+//Styles signin form - Might be moved to appropriate scope
 .signin-form {
     @include babble-style(10px);
     @include babble-text;

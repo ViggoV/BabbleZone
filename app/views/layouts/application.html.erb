@@ -9,8 +9,8 @@
   <body>
     <%= render "shared/navigation_bar" %>
     <div class="container">
-      <%= render "shared/message_area" %>
-      <%= yield %>
+      <%= render "shared/message_area" if flash.any? -%>
+      <%= yield -%>
     </div>
   </body>
 </html>
