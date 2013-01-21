@@ -19,9 +19,13 @@
   <% end %>
 <% end %>
 
-<% flash.each do |key, msg| %>
-  <%= content_tag(:div, :class => "alert alert-block alert-#{key}") do %>
-    <%= content_tag :button, "&times;".html_safe, :class => "close", :data => { :dismiss => "alert" } %>
-    <%= content_tag :p, msg  %>
-  <% end %>
-<% end %>
+      <div class="row">
+        <div class="span12">
+          <% flash.each do |key, msg| %>
+            <%= content_tag(:div, :class => "alert alert-block alert-#{key}") do %>
+              <%= content_tag :button, "&times;".html_safe, :class => "close", :data => { :dismiss => "alert" } %>
+              <%= content_tag :p, msg  %>
+            <% end %>
+          <% end %>
+        </div>
+      </div>

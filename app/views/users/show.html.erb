@@ -1,7 +1,22 @@
 <% provide :header_string, "#{@user.name} @ BabbleZone" %>
 
-<div class="well">
-  <h1><%= @user.name %></h1>
-  <%= user_logged_in?(@user) ? "- Is currently logged in" : "- Is not logged in" %>
+<div class="row">
+  <div class="span12">
+    <div class="user_header">
+      <div class="row-fluid row-relative">
+        <div class="span2">
+          <%= image_tag "testpic.png", :class => "img-polaroid" %>
+        </div>
+        <div class="span10 offset2 span-bottom">
+          <h1><%= @user.name %></h1>
+          <%= user_logged_in?(@user) ? "- Is currently logged in" : "- Is not logged in" %>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-<p>Find me in app/views/users/show.html.erb</p>
+<div class="row">
+  <div class="span12">
+    <p>Find me in app/views/users/show.html.erb</p>
+  </div>
+</div>

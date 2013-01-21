@@ -12,6 +12,7 @@ body {
     padding-top: 60px;
 }
 
+//For the main banners - Should be tidied up when layout is more clear
 #bz_banner {
     width: auto;
     height: auto;
@@ -22,8 +23,42 @@ body {
     @include babble-text;
 }
 
+.user_header {
+    width: auto;
+    height: auto;
+    padding: 20px;
+    margin-bottom: 20px;
+    
+    @include babble-style(10px);
+    @include babble-text;
+}
+//----------
+//Styles signin form
 .signin-form {
     @include babble-style(10px);
     @include babble-text;
     padding: 20px;
 }
+//----------
+
+//Allows for bottom-fixed span*-divs (remember offset* to position left)
+.row-relative {
+    position: relative;
+}
+
+.span-bottom {
+    position: absolute;
+    bottom:0px;
+    left: -18px;
+}
+//----------
+
+//Misc. classes for debugging purposes
+.bg-green {
+    background-color: #0F0;
+}
+
+.bg-blue {
+    background-color: #00F;
+}
+//----------
