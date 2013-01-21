@@ -9,12 +9,12 @@ def create
       flash[:success] = "Sign In Succeeded, yay!"
       redirect_to user_path(user)
     else
-      flash.now[:error] = "Ooops.. Something went wrong! Try again.."
-      render request.referer
+      flash[:error] = "Ooops.. Something went wrong! Try again.."
+      redirect_to request.referer
     end
   else
-    flash.now[:error] = "Sorry, we couldn't log you in.. Try again!"
-    render request.referer
+    flash[:error] = "Sorry, we couldn't log you in.. Try again!"
+    redirect_to request.referer
   end
 end
 
