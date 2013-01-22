@@ -1,0 +1,36 @@
+.babble-scroll {
+    position: relative;
+    overflow: hidden;
+    
+    .babble-scroll-content {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        
+        width: auto;
+        height: auto;
+    }
+    
+    .babble-scroll-bar {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        width: 8px;
+        margin: 5px;
+        
+        border-radius: 4px;
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+        
+        background-color: #000;
+        opacity: 0.3;
+        -moz-opacity: 0.3;
+        
+        &:hover {
+            opacity: 0.5;
+            -moz-opacity: 0.5;
+        }
+        
+        z-index: 1;
+    }
+}

@@ -12,6 +12,38 @@ body {
     padding-top: 60px;
 }
 
+//Bootstrap tweaks
+.navbar-inner {
+    background: none;
+    border: none;
+    .brand {
+        margin-left: 20px;
+        @include babble-text;
+    }
+    .nav {
+        li {
+            @include babble-text;
+        }
+        
+        .dropdown {
+            li {
+                a {
+                    color: #000;
+                    text-shadow: none;
+                }
+            }
+        }
+        
+        .active {
+            @include babble-text;
+            a {
+                @include babble-style(0px);
+            }
+        }
+    }
+    @include babble-style(0px 0px 5px 5px);
+}
+
 //For the main banners - Should be tidied up when layout is more clear
 #bz_banner {
     width: auto;
@@ -53,6 +85,21 @@ body {
     left: -18px;
 }
 //----------
+
+//Styles nav-pills to match babble-style
+ul.nav-pills {
+    .active {
+        a {
+            @include babble-style(5px);
+        }
+    }
+}
+//----------
+
+//Easy drop shadow class
+.drop-shadow {
+    box-shadow: 2px 2px 2px #000;
+}
 
 //Misc. classes for debugging purposes
 .bg-green {

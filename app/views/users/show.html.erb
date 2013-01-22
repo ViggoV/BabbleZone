@@ -4,7 +4,12 @@
     <div class="user_header">
       <div class="row-fluid row-relative">
         <div class="span2">
-          <%= image_tag "testpic.png", :class => "img-polaroid" %>
+          <% if @user.avatar_type == 1 -%>
+            <% gravatar_hash = Digest::MD5.hexdigest(@user.mail) -%>
+            <%= image_tag "http://www.gravatar.com/avatar/" + gravatar_hash + "?s=170", :class => "img-polaroid drop-shadow" %>
+          <% else -%>
+            <%= image_tag "testpic.png", :class => "img-polaroid drop-shadow" %>
+          <% end -%>
         </div>
         <div class="span10 offset2 span-bottom">
           <h1><%= @user.name %></h1>
@@ -16,9 +21,41 @@
 </div>
 <div class="row">
   <div class="span9">
-    <div class="well">Find me in app/views/users/show.html.erb</div>
+    <div class="babble-scroll" style="height: 400px; width: 650px; border: solid 1px #F00;">
+      <div class="babble-scroll-content">
+        <div class="well well-large">Info #1</div>
+        <div class="well well-large">Info #2</div>
+        <div class="well well-large">Info #3</div>
+        <div class="well well-large">Info #4</div>
+        <div class="well well-large">Info #5</div>
+        <div class="well well-large">Info #6</div>
+        <div class="well well-large">Info #7</div>
+        <div class="well well-large">Info #8</div>
+        <div class="well well-large">Info #9</div>
+        <div class="well well-large">Info #10</div>
+        <div class="well well-large">Info #11</div>
+        <div class="well well-large">Info #12</div>
+        <div class="well well-large">Info #13</div>
+        <div class="well well-large">Info #14</div>
+        <div class="well well-large">Info #15</div>
+        <div class="well well-large">Info #16</div>
+        <div class="well well-large">Info #17</div>
+        <div class="well well-large">Info #18</div>
+        <div class="well well-large">Info #19</div>
+        <div class="well well-large">Info #20</div>
+        <div class="well well-large">Info #21</div>
+        <div class="well well-large">Info #22</div>
+        <div class="well well-large">Info #23</div>
+        <div class="well well-large">Info #24</div>
+      </div>
+    </div>
   </div>
   <div class="span3">
-    <div class="well">This will be da menu</div>
+    <ul class="nav nav-pills nav-stacked">
+      <li class="active"><a href="#">Punkt 1</a></li>
+      <li><a href="#">Punkt 2</a></li>
+      <li><a href="#">Punkt 3</a></li>
+      <li><a href="#">Punkt 4</a></li>
+    </ul>
   </div>
 </div>
