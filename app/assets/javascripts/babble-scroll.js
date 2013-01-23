@@ -58,7 +58,7 @@ $(document).ready(function() {
             
             $(this).on("mousewheel DOMMouseScroll", function(e) {
                 e.preventDefault();
-                var delta = e.originalEvent.detail ? e.originalEvent.detail : -e.wheelDelta;
+                var delta = e.originalEvent.detail ? e.originalEvent.detail : -e.originalEvent.wheelDelta;
                 
                 parentTop = $(this).offset().top;
                 maxTop = $(this).innerHeight() - $(this).find(".babble-scroll-bar").outerHeight(true);
